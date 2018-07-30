@@ -13,20 +13,25 @@ class NetworkPool {
     private var connections = [NetworkConnection]()
     private let semaphore: DispatchSemaphore
     private let queue: DispatchQueue
+    private var itemsCreated = 0
     
     private init() {
-        for _ in 0...connectionCount {
-            connections.append(NetworkConnection())
-        }
         self.semaphore = DispatchSemaphore(value: connectionCount)
         queue = DispatchQueue(label: "networkPoolQ")
     }
     
     private func doGetConnection() -> NetworkConnection {
         semaphore.wait()
-        return queue.sync {
-            return connections.remove(at: 0)
+        var result: NetworkConnection? = nil
+        queue.sync {
+            if self.connections.count > 0 {
+                result = connections.remove(at: 0)
+            } else if self.itemsCreated < self.connectionCount {
+                result = NetworkConnection()
+                self.itemsCreated += 1
+            }
         }
+        return result!
     }
     
     private func doReturnConnection(conn: NetworkConnection) {
