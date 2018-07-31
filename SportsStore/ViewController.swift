@@ -76,8 +76,11 @@ class ViewController: UIViewController, UITableViewDataSource {
                 return (totals.0 + product.stockLevel, totals.1 + product.stockValue)
             }
         )
+        let factory = StockTotalFactory.getFactory(curr: StockTotalFactory.Currency.GBP);
+        let totalAmount = factory.converter?.convertTotal(total: finalTotals.1)
+        let formatted = factory.formatter?.formatTotal(total: totalAmount!)
         totalStockLabel.text = "\(finalTotals.0) Products in Stock. "
-            + "Total Value: \(Utils.currencyStringFromNumber(number: finalTotals.1))"
+            + "Total Value: \(formatted!))"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

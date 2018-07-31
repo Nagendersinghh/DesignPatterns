@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C4F4FBF211090A30047A099 /* StockValueImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4F4FBE211090A30047A099 /* StockValueImplementations.swift */; };
+		1C4F4FC1211091380047A099 /* StockValueFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4F4FC0211091380047A099 /* StockValueFactories.swift */; };
 		1C831D16210DE7C40015B45E /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C831D15210DE7C40015B45E /* NetworkConnection.swift */; };
 		1C831D18210DE87D0015B45E /* NetworkPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C831D17210DE87D0015B45E /* NetworkPool.swift */; };
 		1C831D1A210DEBF10015B45E /* ProductDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C831D19210DEBF10015B45E /* ProductDataStore.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C4F4FBE211090A30047A099 /* StockValueImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueImplementations.swift; sourceTree = "<group>"; };
+		1C4F4FC0211091380047A099 /* StockValueFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueFactories.swift; sourceTree = "<group>"; };
 		1C831D15210DE7C40015B45E /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		1C831D17210DE87D0015B45E /* NetworkPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPool.swift; sourceTree = "<group>"; };
 		1C831D19210DEBF10015B45E /* ProductDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataStore.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 				1CC39D36210655A00009F05D /* Utils.swift */,
 				1CC39D38210657140009F05D /* Product.swift */,
 				1CC890192107C1F000AE5C3B /* Logger.swift */,
+				1C4F4FBE211090A30047A099 /* StockValueImplementations.swift */,
+				1C4F4FC0211091380047A099 /* StockValueFactories.swift */,
 				1C831D15210DE7C40015B45E /* NetworkConnection.swift */,
 				1C831D17210DE87D0015B45E /* NetworkPool.swift */,
 				1C831D19210DEBF10015B45E /* ProductDataStore.swift */,
@@ -154,12 +160,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CC8901A2107C1F000AE5C3B /* Logger.swift in Sources */,
+				1C4F4FC1211091380047A099 /* StockValueFactories.swift in Sources */,
 				1C831D1A210DEBF10015B45E /* ProductDataStore.swift in Sources */,
 				1CC39D27210640F60009F05D /* ViewController.swift in Sources */,
 				1C831D16210DE7C40015B45E /* NetworkConnection.swift in Sources */,
 				1CC39D39210657140009F05D /* Product.swift in Sources */,
 				1CC39D25210640F60009F05D /* AppDelegate.swift in Sources */,
 				1CC39D37210655A00009F05D /* Utils.swift in Sources */,
+				1C4F4FBF211090A30047A099 /* StockValueImplementations.swift in Sources */,
 				1C831D18210DE87D0015B45E /* NetworkPool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
